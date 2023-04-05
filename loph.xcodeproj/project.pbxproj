@@ -14,6 +14,9 @@
 		A1E49A1629DDB24B000DEF54 /* lophTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A1529DDB24B000DEF54 /* lophTests.swift */; };
 		A1E49A2029DDB24B000DEF54 /* lophUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A1F29DDB24B000DEF54 /* lophUITests.swift */; };
 		A1E49A2229DDB24B000DEF54 /* lophUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A2129DDB24B000DEF54 /* lophUITestsLaunchTests.swift */; };
+		A1E49A2F29DDB4A4000DEF54 /* studyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A2E29DDB4A4000DEF54 /* studyView.swift */; };
+		A1E49A3329DDB505000DEF54 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A3229DDB505000DEF54 /* ProgressBar.swift */; };
+		A1E49A3729DDB5D8000DEF54 /* NotificationAppExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A3629DDB5D8000DEF54 /* NotificationAppExit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		A1E49A1B29DDB24B000DEF54 /* lophUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lophUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E49A1F29DDB24B000DEF54 /* lophUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lophUITests.swift; sourceTree = "<group>"; };
 		A1E49A2129DDB24B000DEF54 /* lophUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lophUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1E49A2E29DDB4A4000DEF54 /* studyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studyView.swift; sourceTree = "<group>"; };
+		A1E49A3229DDB505000DEF54 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		A1E49A3629DDB5D8000DEF54 /* NotificationAppExit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAppExit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 			children = (
 				A1E49A0329DDB249000DEF54 /* lophApp.swift */,
 				A1E49A0529DDB249000DEF54 /* ContentView.swift */,
+				A1E49A2E29DDB4A4000DEF54 /* studyView.swift */,
+				A1E49A3229DDB505000DEF54 /* ProgressBar.swift */,
+				A1E49A3629DDB5D8000DEF54 /* NotificationAppExit.swift */,
 				A1E49A0729DDB24B000DEF54 /* Assets.xcassets */,
 				A1E49A0929DDB24B000DEF54 /* loph.entitlements */,
 				A1E49A0A29DDB24B000DEF54 /* Preview Content */,
@@ -260,6 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E49A0629DDB249000DEF54 /* ContentView.swift in Sources */,
+				A1E49A2F29DDB4A4000DEF54 /* studyView.swift in Sources */,
+				A1E49A3729DDB5D8000DEF54 /* NotificationAppExit.swift in Sources */,
+				A1E49A3329DDB505000DEF54 /* ProgressBar.swift in Sources */,
 				A1E49A0429DDB249000DEF54 /* lophApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
