@@ -6,8 +6,8 @@
 //
 
 
-import SwiftUI
-import UIKit
+/*import SwiftUI
+//import UIKit
 import UserNotifications
 import CoreLocation
 
@@ -98,3 +98,4 @@ struct NotificationAppExit_Previews: PreviewProvider {
     }
 }
 
+*/

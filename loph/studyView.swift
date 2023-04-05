@@ -4,105 +4,81 @@
 //
 //  Created by 90309356 on 3/2/23.
 //
-
 import SwiftUI
 
-struct studyView: View {
-
-  //  let skyBlue = Color(red: 0.4627, green: 0.8392, blue: 1.0)
-    @StateObject private var vm = ViewModel()
-    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+struct studyView: View{
+    @EnvironmentObject var min : testing
+    //@State var showingAlert = false
+    @State var initialTime = 0  //Used to keep track of the current time
+    @State var endDate = Date() //Used to keep track of the current time
+    @State var minutes: Float = 30.0{ //user selected minutes (slider)
+        didSet{
+            min.time = "\(Int(min.minutes)):00" //when user picks time, immediatly update the time (slider)
+        }//closes didset
+    }//closes float
     
-    private let width: Double = 250
-    @State var progressValue: Float = 0.0
- //   @State var timer= Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-//timer needs to be a float? for progress bar to work
-    let skyBlue = Color(red: 0.95, green: 0.85, blue: 1.00)
-    
-
+    public let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     
-
+    
     var body: some View {
-            ZStack{
-                skyBlue
-                    .ignoresSafeArea()
-                VStack {
-                    Menu  {
-                        Button ("End Timer") {
-                            
-                        }
-                        Menu ("Add Break"){
-                            Button ("5 Minute Breeak"){
-                            }
-                            Button ("7 Minute Break") {
-                            }
-                            Button ("10 Minute Break"){
-                            }
-                        }
-                        
-                        Button("Close", role: .destructive){
-                        }
-                        
-                        
-                    } label: {
-                        Label("Pause", systemImage: "pause.fill")
-                    }
-                    VStack{
-                        
-                        Text("\(vm.time)")
-                            .font(.system(size: 70, weight: .medium, design: .rounded))
-                            .padding()
-                        
-                        Button("start"){
-                            vm.start(minutes: vm.minutes)
-                        }
-                        .disabled(vm.isActive)
-                        }
-                    .onReceive(timer) { _ in
-                        vm.updateCountDown()
-                    }
-                    //^^This is how the timer sets.
-                    
-                    
-                            //don't need a reset button
-                            //   Button("reset", action:vm.reset)
-                            //    .tint(.red)
-                            // .frame(width: width)
-                        
-                    Spacer()
-                    
-                        ProgressBar(progress: 50, lineWidth: 15)
-                        //progress bar needs to be fixed
-                        ZStack {
-                            //Image("food smaller")
-                            Image("lock black")
-                            
-                            
-                        
-                        
-                        
-                    }//2nd zstack
-                    
-                    Image("cat2")
-                }//2nd vstack
-            
-            }//1st vstack
-        }//zstack
-            /*
-             //declaration issue
-            .onReceive(timer) { _ in
-                vm.updateCountDown()
-             
+        VStack{
+            Text("\(min.time)")
+                .font(.system(size: 70, weight: .medium, design: .rounded))
+                .padding()
+            Button("start"){
+                start(minutes: min.minutes)
+            }//ButtonStart
+            .disabled(min.isActive)
+            }.environmentObject(testing())
+            .onReceive(timer) {_ in
+                updateCountDown()
             }
-             */
-    }//var body
+    } // var body: some View
     
+    
+    func start(minutes: Float){ //Start timer with the given minutes (has to be float bc slider requires float)
+        initialTime = Int(minutes) // initial time set to the int of the minutes the user selects
+        endDate = Date() // date of the time when the user starts the timer (time gets
+        min.isActive = true // timer starts so is currentenly on
+        endDate = Calendar.current.date(byAdding: .minute /* can change <<< to hour our minutes*/, value: Int(minutes), to: endDate)! // adding the user inputed minutes to the end date
+    }//func start
+    
+    
+    func updateCountDown(){ //actually updates published value and format everything
+        guard min.isActive else{return} // make sure isActive is true
+        
+        let now = Date() // current date
+        let diff = endDate.timeIntervalSince1970 - now.timeIntervalSince1970 // remaining time between now and the end time
+        
+        if diff <= 0{ //means count down is over
+            min.isActive = false
+            min.time = "0:00"
+            //self.showingAlert = true
+            return
+        } // diff
+        
+        let date = Date(timeIntervalSince1970: diff)
+        let calendar = Calendar.current //grab components from calendar
+        let minute = calendar.component(.minute, from:date) // grab minutes from the components
+        let second = calendar.component(.second, from:date) // grab seconds.  from the components
+        //^^ needed to create string
+        min.minutes = Float(minutes) //keep track of remaining minutes fromt the slider
+        min.time = String(format:"%d:%02d", minute, second) // assign that to the string and formate.
+        
+        
+    }//func updateCountDown
+} // struct studyView: View
+
+
+
+
+
+
     struct studyView_Previews: PreviewProvider {
         static var previews: some View {
             studyView()
-        }//preview
-    }//studyview preview
-//study view view
-
+                .environmentObject(testing())
+        }
+    }
 
