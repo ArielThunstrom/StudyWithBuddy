@@ -14,8 +14,7 @@ import SwiftUI
         }
     }
 }
-let skyBlue = Color(red: 0.694, green: 0.737, blue: 0.627)
-
+let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
 
 
 struct ContentView: View {
@@ -54,8 +53,8 @@ struct ContentView: View {
                     
                 }
                 
-            }.environmentObject(min)
-        }
+            }
+        }.environmentObject(min)
         //navigationView
     }//body
 }//struct view
