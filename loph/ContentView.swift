@@ -21,6 +21,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack{
+                Spacer()
                 Text("\(min.time)")
                     .font(.system(size: 70, weight: .medium, design: .rounded))
                     .padding()
@@ -38,6 +39,12 @@ struct ContentView: View {
                 } label: {
                     Text("start")
                 }//label
+                Spacer()
+                HStack {
+                    Spacer()
+                    Image("white bird")
+                }
+                
                 
             }
             
