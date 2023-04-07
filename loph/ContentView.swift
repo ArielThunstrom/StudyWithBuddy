@@ -14,7 +14,7 @@ import SwiftUI
         }
     }
 }
-let skyBlue = Color(red: 0.95, green: 0.85, blue: 1.00)
+let skyBlue = Color(red: 0.694, green: 0.737, blue: 0.627)
 
 
 
