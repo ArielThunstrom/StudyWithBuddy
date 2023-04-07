@@ -14,42 +14,48 @@ import SwiftUI
         }
     }
 }
+let skyBlue = Color(red: 0.95, green: 0.85, blue: 1.00)
+
+
 
 struct ContentView: View {
    // @Environment(\.scenePhase) var scenePhase
     @StateObject var min = testing()
     var body: some View {
         NavigationView{
-            VStack{
-                Spacer()
-                Text("\(min.time)")
-                    .font(.system(size: 70, weight: .medium, design: .rounded))
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius:20).stroke(Color.gray, lineWidth:4))
-                
-                
-                Slider(value: $min.minutes, in: 1...60, step:1)
-                    .disabled(min.isActive)
-                    .frame(width: 250)
-                    .animation(.easeInOut, value: min.minutes)
-                
-                
-                NavigationLink{
-                    studyView()
-                } label: {
-                    Text("start")
-                }//label
-                Spacer()
-                HStack {
+            ZStack {
+                skyBlue
+                    .ignoresSafeArea()
+                VStack{
                     Spacer()
-                    Image("white bird")
+                    Text("\(min.time)")
+                        .font(.system(size: 70, weight: .medium, design: .rounded))
+                        .padding()
+                        .overlay(RoundedRectangle(cornerRadius:20).stroke(Color.gray, lineWidth:4))
+                    
+                    
+                    Slider(value: $min.minutes, in: 1...60, step:1)
+                        .disabled(min.isActive)
+                        .frame(width: 250)
+                        .animation(.easeInOut, value: min.minutes)
+                    
+                    
+                    NavigationLink{
+                        studyView()
+                    } label: {
+                        Text("start")
+                    }//label
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Image("white bird")
+                    }
+                    
+                    
                 }
                 
-                
-            }
-            
-        }.environmentObject(min)
-           
+            }.environmentObject(min)
+        }
         //navigationView
     }//body
 }//struct view
