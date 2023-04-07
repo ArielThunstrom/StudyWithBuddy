@@ -4,7 +4,7 @@
 //
 //  Created by 90305906 on 3/16/22.
 //
-
+/*
 import Foundation
 //import UIKit
 import CloudKit
@@ -308,4 +308,4 @@ class ItemModel : ObservableObject {
     
 }
 
-
+*/
