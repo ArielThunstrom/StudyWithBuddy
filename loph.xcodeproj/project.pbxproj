@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1B3128229DF047900FB78CF /* clothingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3128129DF047900FB78CF /* clothingView.swift */; };
-		A1B3128429DF062900FB78CF /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3128329DF062900FB78CF /* ItemModel.swift */; };
-		A1B3128629DF068200FB78CF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3128529DF068200FB78CF /* Item.swift */; };
-		A1B3128829DF08FA00FB78CF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3128729DF08F900FB78CF /* ImagePicker.swift */; };
+		A11364AC29E59DB1007BF4A4 /* clothingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11364AB29E59DB1007BF4A4 /* clothingView.swift */; };
 		A1E49A0429DDB249000DEF54 /* lophApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A0329DDB249000DEF54 /* lophApp.swift */; };
 		A1E49A0629DDB249000DEF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A0529DDB249000DEF54 /* ContentView.swift */; };
 		A1E49A0829DDB24B000DEF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E49A0729DDB24B000DEF54 /* Assets.xcassets */; };
@@ -41,10 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A1B3128129DF047900FB78CF /* clothingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clothingView.swift; sourceTree = "<group>"; };
-		A1B3128329DF062900FB78CF /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
-		A1B3128529DF068200FB78CF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		A1B3128729DF08F900FB78CF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		A11364AB29E59DB1007BF4A4 /* clothingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clothingView.swift; sourceTree = "<group>"; };
 		A1E49A0029DDB249000DEF54 /* loph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E49A0329DDB249000DEF54 /* lophApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lophApp.swift; sourceTree = "<group>"; };
 		A1E49A0529DDB249000DEF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,11 +105,8 @@
 			children = (
 				A1E49A0329DDB249000DEF54 /* lophApp.swift */,
 				A1E49A0529DDB249000DEF54 /* ContentView.swift */,
+				A11364AB29E59DB1007BF4A4 /* clothingView.swift */,
 				A1E49A2E29DDB4A4000DEF54 /* studyView.swift */,
-				A1B3128129DF047900FB78CF /* clothingView.swift */,
-				A1B3128329DF062900FB78CF /* ItemModel.swift */,
-				A1B3128729DF08F900FB78CF /* ImagePicker.swift */,
-				A1B3128529DF068200FB78CF /* Item.swift */,
 				A1E49A3229DDB505000DEF54 /* ProgressBar.swift */,
 				A1E49A3629DDB5D8000DEF54 /* NotificationAppExit.swift */,
 				A1E49A0729DDB24B000DEF54 /* Assets.xcassets */,
@@ -282,12 +273,9 @@
 			files = (
 				A1E49A0629DDB249000DEF54 /* ContentView.swift in Sources */,
 				A1E49A2F29DDB4A4000DEF54 /* studyView.swift in Sources */,
-				A1B3128229DF047900FB78CF /* clothingView.swift in Sources */,
-				A1B3128829DF08FA00FB78CF /* ImagePicker.swift in Sources */,
+				A11364AC29E59DB1007BF4A4 /* clothingView.swift in Sources */,
 				A1E49A3729DDB5D8000DEF54 /* NotificationAppExit.swift in Sources */,
-				A1B3128629DF068200FB78CF /* Item.swift in Sources */,
 				A1E49A3329DDB505000DEF54 /* ProgressBar.swift in Sources */,
-				A1B3128429DF062900FB78CF /* ItemModel.swift in Sources */,
 				A1E49A0429DDB249000DEF54 /* lophApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
