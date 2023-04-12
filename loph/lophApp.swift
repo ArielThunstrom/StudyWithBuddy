@@ -28,6 +28,7 @@ struct lophApp: App {
         WindowGroup {
             ContentView()
             //studyView()
+            
         }
     }
 }

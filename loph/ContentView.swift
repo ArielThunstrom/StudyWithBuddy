@@ -27,6 +27,12 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 VStack{
                     Spacer()
+                    NavigationLink {
+                        clothingView()
+                    } label: {
+                        Text("closet")
+                    }
+                    Spacer()
                     Text("\(min.time)")
                         .font(.system(size: 70, weight: .medium, design: .rounded))
                         .padding()
