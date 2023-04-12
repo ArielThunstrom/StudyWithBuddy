@@ -14,7 +14,11 @@ let data = (1...100).map { "Item \($0)" }
 let clothing = ["shoes", "collar", "high heels", "a", "b", "c" ]
 //@State private var clothing = ["shoes", "collar", "high heels", "a", "b", "c" ]
 
+
+
+
 struct clothingView: View {
+
     var body: some View {
         ZStack{
             green
@@ -39,8 +43,9 @@ struct clothingView: View {
                  */
         }
     }
+    /*
     var items: some View {
-        ForEach(clothing, id: \.self){ item in
+        ForEach(categories, id: \.self){ item in
             
             if let url = item.image, let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
                 Image(uiImage: image)
@@ -57,7 +62,7 @@ struct clothingView: View {
             }
         }
     }
-
+*/
 }
 
 struct clothingView_Previews: PreviewProvider {
