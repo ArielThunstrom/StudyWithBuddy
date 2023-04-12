@@ -30,7 +30,7 @@ struct ContentView: View {
                     Text("\(min.time)")
                         .font(.system(size: 70, weight: .medium, design: .rounded))
                         .padding()
-                        .overlay(RoundedRectangle(cornerRadius:20).stroke(Color.gray, lineWidth:4))
+                       // .overlay(RoundedRectangle(cornerRadius:20).stroke(Color.gray, lineWidth:4))
                     
                     
                     Slider(value: $min.minutes, in: 1...60, step:1)
@@ -54,7 +54,7 @@ struct ContentView: View {
                 }
                 
             }
-        }.environmentObject(min)
+        } .environmentObject(min)
         //navigationView
     }//body
 }//struct view

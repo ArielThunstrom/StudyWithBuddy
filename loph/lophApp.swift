@@ -6,7 +6,7 @@
 //
 import UserNotifications
 import SwiftUI
-class AppDelegate: NSObject, UIApplicationDelegate{
+  /*  class AppDelegate: NSObject, UIApplicationDelegate{
     func applicationDidEnterBackground( _ application: UIApplication) {
         let content = UNMutableNotificationContent()
         content.title = "app closed"
@@ -20,10 +20,10 @@ class AppDelegate: NSObject, UIApplicationDelegate{
                    // Handle error
                }
     }
-}
+}*/
 @main
 struct lophApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+   // @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
             ContentView()
