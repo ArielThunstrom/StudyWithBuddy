@@ -9,7 +9,8 @@ import SwiftUI
 
 let green = Color(red: 0.808, green: 0.847, blue: 0.78)
 
-let data = (1...100).map { "Item \($0)" }
+let data = (1...9).map { "Item \($0)" }
+
 
 let clothing = ["shoes", "collar", "high heels", "a", "b", "c" ]
 //@State private var clothing = ["shoes", "collar", "high heels", "a", "b", "c" ]
@@ -19,6 +20,10 @@ let clothing = ["shoes", "collar", "high heels", "a", "b", "c" ]
 
 struct clothingView: View {
 
+   
+    
+
+    
     var body: some View {
         ZStack{
             green

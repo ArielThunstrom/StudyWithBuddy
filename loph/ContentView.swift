@@ -26,7 +26,7 @@ struct ContentView: View {
                 skyBlue
                     .ignoresSafeArea()
                 VStack{
-                    Spacer()
+                    //Spacer()
                     NavigationLink {
                         clothingView()
                     } label: {
