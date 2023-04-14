@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A11364AC29E59DB1007BF4A4 /* clothingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11364AB29E59DB1007BF4A4 /* clothingView.swift */; };
 		A141207A29E6EF8B0038340A /* clothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141207929E6EF8B0038340A /* clothingItem.swift */; };
+		A141207C29E9961A0038340A /* birdImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141207B29E9961A0038340A /* birdImage.swift */; };
 		A1E49A0429DDB249000DEF54 /* lophApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A0329DDB249000DEF54 /* lophApp.swift */; };
 		A1E49A0629DDB249000DEF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A0529DDB249000DEF54 /* ContentView.swift */; };
 		A1E49A0829DDB24B000DEF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E49A0729DDB24B000DEF54 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		A11364AB29E59DB1007BF4A4 /* clothingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clothingView.swift; sourceTree = "<group>"; };
 		A141207929E6EF8B0038340A /* clothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clothingItem.swift; sourceTree = "<group>"; };
+		A141207B29E9961A0038340A /* birdImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = birdImage.swift; sourceTree = "<group>"; };
 		A1E49A0029DDB249000DEF54 /* loph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E49A0329DDB249000DEF54 /* lophApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lophApp.swift; sourceTree = "<group>"; };
 		A1E49A0529DDB249000DEF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				A1E49A0329DDB249000DEF54 /* lophApp.swift */,
 				A1E49A0529DDB249000DEF54 /* ContentView.swift */,
+				A141207B29E9961A0038340A /* birdImage.swift */,
 				A11364AB29E59DB1007BF4A4 /* clothingView.swift */,
 				A141207929E6EF8B0038340A /* clothingItem.swift */,
 				A1E49A2E29DDB4A4000DEF54 /* studyView.swift */,
@@ -280,6 +283,7 @@
 				A11364AC29E59DB1007BF4A4 /* clothingView.swift in Sources */,
 				A1E49A3729DDB5D8000DEF54 /* NotificationAppExit.swift in Sources */,
 				A1E49A3329DDB505000DEF54 /* ProgressBar.swift in Sources */,
+				A141207C29E9961A0038340A /* birdImage.swift in Sources */,
 				A1E49A0429DDB249000DEF54 /* lophApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
