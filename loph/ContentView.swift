@@ -21,10 +21,18 @@ struct ContentView: View {
    // @Environment(\.scenePhase) var scenePhase
     @StateObject var min = testing()
     //@ObservedObject var picture = birdImage()
-    var picture : String = clothingItem().$starting
+    @ObservedObject var picture = birdImage()
+    
+    @State var picString = "white bird"
+       
+    
     
     
     var body: some View {
+        
+        //var test = picture.start
+        //picString = test.image
+        
         NavigationView{
             ZStack {
                 skyBlue
@@ -32,7 +40,7 @@ struct ContentView: View {
                 VStack{
                     //Spacer()
                     NavigationLink {
-                        clothingView()
+                        clothingView(pictureString: Binding.constant("white bird"))
                     } label: {
                         Text("closet")
                     }
@@ -57,15 +65,19 @@ struct ContentView: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        Image("white bird")
-                        Image(picture.starting)
+                        //Image("white bird")
+                        Image(picString)
                     }
                     
                     
                 }
                 
             }
+            //.sheet(pictureString: $picString) {
+              //  clothingView(pictureString: $picString)
+            //}
         } .environmentObject(min)
+            
         //navigationView
     }//body
 }//struct view
@@ -74,6 +86,7 @@ struct ContentView: View {
         
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
+            //ContentView(picString: "white bird")
             ContentView()
         }
     }

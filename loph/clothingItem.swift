@@ -28,7 +28,7 @@ class clothingItem : ObservableObject {
         type(category: "Pink", image: "pink bird"),
         type(category: "Grey", image: "grey bird"),
         type(category: "Black", image: "black birdpng"),
-        type(category: "Purple", image: "pink bird"),
+        type(category: "Purple", image: "purple bird"),
         
         ]
     
