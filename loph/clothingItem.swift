@@ -15,6 +15,7 @@ class clothingItem : ObservableObject {
         var image: String
     }
     
+    @Published var starting = type(category: "white", image: "white bird")
     
     @Published var categories: [String] = ["Red", "Orange", "Yellow", "Green", "Blue", "Pink", "Grey", "Black", "Purple"]
     
