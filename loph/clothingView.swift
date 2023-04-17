@@ -9,21 +9,16 @@ import SwiftUI
 
 let green = Color(red: 0.808, green: 0.847, blue: 0.78)
 
-let data = (1...9).map { "Item \($0)" }
-
-
-let clothing = ["shoes", "collar", "high heels", "a", "b", "c" ]
-//@State private var clothing = ["shoes", "collar", "high heels", "a", "b", "c" ]
 
 
 
 
 struct clothingView: View {
 
-   
     
-
+    @ObservedObject var birds = clothingItem()
     
+ 
     var body: some View {
         ZStack{
             green
@@ -34,9 +29,21 @@ struct clothingView: View {
                     GridItem(.flexible()),
                     GridItem(.flexible()),
                     GridItem(.flexible())
-                ], spacing: 3){
-                    ForEach(data, id: \.self) { item in
-                        Text(item)
+                ], spacing: 6){
+                    //ForEach(data, id: \.self) { item in
+                     // Text(item)
+                    ForEach(birds.types, id: \.self) { item in
+                        VStack {
+                            Button(item.category){
+                                //change the pic of the bird here
+                                
+                            }
+                            Image(item.image)
+                            //Image(item.image)
+                            //Text(item.category)
+                        }
+                        
+                       
                     }
                 }
             }.coordinateSpace(name: "scroll")
@@ -73,5 +80,6 @@ struct clothingView: View {
 struct clothingView_Previews: PreviewProvider {
     static var previews: some View {
         clothingView()
+       // clothingView().environmentObject(clothingItem)
     }
 }

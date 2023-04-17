@@ -20,6 +20,10 @@ let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
 struct ContentView: View {
    // @Environment(\.scenePhase) var scenePhase
     @StateObject var min = testing()
+    //@ObservedObject var picture = birdImage()
+    var picture : String = clothingItem().$starting
+    
+    
     var body: some View {
         NavigationView{
             ZStack {
@@ -54,6 +58,7 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         Image("white bird")
+                        Image(picture.starting)
                     }
                     
                     
