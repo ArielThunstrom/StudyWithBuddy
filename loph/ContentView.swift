@@ -17,13 +17,14 @@ import SwiftUI
 let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
 
 
+
 struct ContentView: View {
    // @Environment(\.scenePhase) var scenePhase
     @StateObject var min = testing()
     //@ObservedObject var picture = birdImage()
-    @ObservedObject var picture = birdImage()
-    
-    @State var picString = "white bird"
+    //@ObservedObject var picture = birdImage()
+    @EnvironmentObject var birdy : pictureString
+    //@State var picString = "white bird"
        
     
     
@@ -40,7 +41,7 @@ struct ContentView: View {
                 VStack{
                     //Spacer()
                     NavigationLink {
-                        clothingView(pictureString: Binding.constant("white bird"))
+                        clothingView()
                     } label: {
                         Text("closet")
                     }
@@ -66,7 +67,7 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         //Image("white bird")
-                        Image(picString)
+                        Image(birdy.imageString)
                     }
                     
                     
@@ -77,6 +78,7 @@ struct ContentView: View {
               //  clothingView(pictureString: $picString)
             //}
         } .environmentObject(min)
+            .environmentObject(pictureString())
             
         //navigationView
     }//body
@@ -88,6 +90,7 @@ struct ContentView: View {
         static var previews: some View {
             //ContentView(picString: "white bird")
             ContentView()
+                .environmentObject(pictureString())
         }
     }
                        

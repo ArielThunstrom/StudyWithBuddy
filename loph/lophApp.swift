@@ -26,7 +26,7 @@ struct lophApp: App {
    // @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            ContentView(picString: "white bird")
+            ContentView()
             //studyView()
             
         }
