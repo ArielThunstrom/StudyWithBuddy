@@ -61,6 +61,7 @@ struct studyView: View{
                     .font(.system(size: 70, weight: .medium, design: .rounded))
                     .padding()
                 Button("start"){
+                    //.//font(.system(.title2, design: .monospaced))
                     start(minutes: min.minutes)
                     
                 }//ButtonStart

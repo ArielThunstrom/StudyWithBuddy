@@ -36,20 +36,34 @@ struct clothingView: View {
                 .ignoresSafeArea()
             //put a background image here
             ScrollView {
+                Text("Pick Your Study Buddy!")
+                    .font(.system(.title2, design: .monospaced))
                 LazyVGrid(columns: [
                     GridItem(.flexible()),
                     GridItem(.flexible()),
                     GridItem(.flexible())
-                ], spacing: 6){
+                ], spacing: 3){
                     //ForEach(data, id: \.self) { item in
                      // Text(item)
                     ForEach(birds.types, id: \.self) { item in
                         VStack {
+                            //Image(item.image)
+/*
                             Button(item.category){
                                 //change the pic of the bird here
                                 min.imageString = item.image
+                                //Image(item.image)
+                                
                             }
-                            Image(item.image)
+                            */
+                            //Image(item.image)
+                            Button(action: {
+                                //Text(item.category)
+                                min.imageString = item.image
+                            }) {
+                                Image(item.image)
+                                Text(item.category)
+                            }
                             
                         }
                         

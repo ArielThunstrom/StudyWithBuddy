@@ -53,10 +53,12 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 VStack{
                     //Spacer()
+                    
                     NavigationLink {
                         clothingView()
                     } label: {
-                        Text("closet")
+                        Text("Change Your Study Buddy")
+                            .font(.system(.title2, design: .monospaced))
                     }
                     Spacer()
                     Text("\(min.time)")
@@ -74,7 +76,8 @@ struct ContentView: View {
                     NavigationLink{
                         studyView()
                     } label: {
-                        Text("start")
+                        Text("Start Study Session")
+                            .font(.system(.title2, design: .monospaced))
                     }//label
                     Spacer()
                     HStack {
