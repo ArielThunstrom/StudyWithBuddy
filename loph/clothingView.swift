@@ -8,12 +8,14 @@
 import SwiftUI
 
 let green = Color(red: 0.808, green: 0.847, blue: 0.78)
+//this is basically testing
+/*
 @MainActor class pictureString : ObservableObject{
     
     @Published var imageString: String = "white bird"
     
 }
-
+*/
 
 //@Binding var picString: String
 
@@ -23,7 +25,9 @@ struct clothingView: View {
     
     
     @ObservedObject var birds = clothingItem()
-    @StateObject var birdy = pictureString()
+    
+    //this is basically min
+    @EnvironmentObject var min : testing
  
     var body: some View {
        
@@ -43,7 +47,7 @@ struct clothingView: View {
                         VStack {
                             Button(item.category){
                                 //change the pic of the bird here
-                                birdy.imageString = item.image
+                                min.imageString = item.image
                             }
                             Image(item.image)
                             
@@ -59,7 +63,7 @@ struct clothingView: View {
                         .frame(height: 3)//idk what the hieght should be
                 })
                  */
-        }.environmentObject(birdy)
+        }.environmentObject(testing())
     }
     
 }
@@ -67,6 +71,8 @@ struct clothingView: View {
 struct clothingView_Previews: PreviewProvider {
     static var previews: some View {
         clothingView()
+            .environmentObject(testing())
+            
         
        // clothingView().environmentObject(clothingItem)
     }

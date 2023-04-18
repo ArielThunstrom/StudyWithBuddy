@@ -13,7 +13,13 @@ import SwiftUI
             time = "\(Int(minutes)):00"
         }
     }
+    //@Published var testString : String = "white bird"
+    @Published var imageString: String = "white bird"
+    
 }
+
+
+
 let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
 
 
@@ -23,7 +29,11 @@ struct ContentView: View {
     @StateObject var min = testing()
     //@ObservedObject var picture = birdImage()
     //@ObservedObject var picture = birdImage()
-    @EnvironmentObject var birdy : pictureString
+    //@EnvironmentObject var birdy : pictureString
+    
+    
+    
+    //let starting : String = birdy.imageString
     //@State var picString = "white bird"
        
     
@@ -33,6 +43,9 @@ struct ContentView: View {
         
         //var test = picture.start
         //picString = test.image
+        //var starting : String = birdy.imageString
+        //var starting : String = birdy.imageString
+        
         
         NavigationView{
             ZStack {
@@ -67,7 +80,7 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         //Image("white bird")
-                        Image(birdy.imageString)
+                        Image(min.imageString)
                     }
                     
                     
@@ -78,7 +91,7 @@ struct ContentView: View {
               //  clothingView(pictureString: $picString)
             //}
         } .environmentObject(min)
-            .environmentObject(pictureString())
+          //.environmentObject(pictureString())
             
         //navigationView
     }//body
@@ -90,7 +103,7 @@ struct ContentView: View {
         static var previews: some View {
             //ContentView(picString: "white bird")
             ContentView()
-                .environmentObject(pictureString())
+                
         }
     }
                        

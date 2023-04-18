@@ -65,7 +65,7 @@ struct studyView: View{
                     
                 }//ButtonStart
                 .disabled(min.isActive)
-                Image("white bird")
+                Image(min.imageString)
             }
             .environmentObject(testing())
             .onReceive(timer) {_ in
