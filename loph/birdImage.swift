@@ -16,14 +16,8 @@ class birdImage : ObservableObject {
     }
     
     @Published var start = pic(image: "white bird")
-    //@Published var startingString = start.image
-   // @Published var start = "white bird"
-    
-    
-    
-    
-    
-    
+
+
 }
 
 

@@ -13,7 +13,7 @@ import SwiftUI
             time = "\(Int(minutes)):00"
         }
     }
-    //@Published var testString : String = "white bird"
+    
     @Published var imageString: String = "white bird"
     
 }
@@ -25,26 +25,11 @@ let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
 
 
 struct ContentView: View {
-   // @Environment(\.scenePhase) var scenePhase
+
     @StateObject var min = testing()
-    //@ObservedObject var picture = birdImage()
-    //@ObservedObject var picture = birdImage()
-    //@EnvironmentObject var birdy : pictureString
-    
-    
-    
-    //let starting : String = birdy.imageString
-    //@State var picString = "white bird"
-       
-    
-    
+
     
     var body: some View {
-        
-        //var test = picture.start
-        //picString = test.image
-        //var starting : String = birdy.imageString
-        //var starting : String = birdy.imageString
         
         
         NavigationView{
@@ -52,8 +37,7 @@ struct ContentView: View {
                 skyBlue
                     .ignoresSafeArea()
                 VStack{
-                    //Spacer()
-                    
+                   
                     NavigationLink {
                         clothingView()
                     } label: {
@@ -64,8 +48,7 @@ struct ContentView: View {
                     Text("\(min.time)")
                         .font(.system(size: 70, weight: .medium, design: .rounded))
                         .padding()
-                       // .overlay(RoundedRectangle(cornerRadius:20).stroke(Color.gray, lineWidth:4))
-                    
+                       
                     
                     Slider(value: $min.minutes, in: 1...60, step:1)
                         .disabled(min.isActive)
@@ -82,7 +65,6 @@ struct ContentView: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        //Image("white bird")
                         Image(min.imageString)
                     }
                     
@@ -90,13 +72,10 @@ struct ContentView: View {
                 }
                 
             }
-            //.sheet(pictureString: $picString) {
-              //  clothingView(pictureString: $picString)
-            //}
+
         } .environmentObject(min)
-          //.environmentObject(pictureString())
+
             
-        //navigationView
     }//body
 }//struct view
     
@@ -104,7 +83,6 @@ struct ContentView: View {
         
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            //ContentView(picString: "white bird")
             ContentView()
                 
         }

@@ -4,6 +4,10 @@
 //
 //  Created by 90309356 on 4/5/23.
 //
+
+
+
+//for notifications
 import UserNotifications
 import SwiftUI
   /*  class AppDelegate: NSObject, UIApplicationDelegate{
