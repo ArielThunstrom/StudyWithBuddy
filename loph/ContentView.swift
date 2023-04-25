@@ -61,6 +61,12 @@ struct ContentView: View {
                     } label: {
                         Text("Start Study Session")
                             .font(.system(.title2, design: .monospaced))
+                            .padding()
+                            .frame(width: 280)
+                            .background(.thinMaterial)
+                            .cornerRadius(20)
+                            .overlay(RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.gray, lineWidth: 4))
                     }//label
                     Spacer()
                     HStack {
