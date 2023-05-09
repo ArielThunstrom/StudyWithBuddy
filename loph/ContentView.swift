@@ -37,13 +37,20 @@ struct ContentView: View {
                 skyBlue
                     .ignoresSafeArea()
                 VStack{
-                   
-                    NavigationLink {
-                        clothingView()
-                    } label: {
-                        Text("Change Your Study Buddy")
-                            .font(.system(.title2, design: .monospaced))
+                    HStack {
+                        //put a settings button here
+                        Spacer()
+                     
+                        NavigationLink {
+                            clothingView()
+                        } label: {
+                            Image("smallHanger")
+                            //Text("Change Your Study Buddy")
+                                //.font(.system(.title2, design: .monospaced))
+                           
+                        }
                     }
+                    
                     Spacer()
                     Text("\(min.time)")
                         .font(.system(size: 70, weight: .medium, design: .rounded))
@@ -70,6 +77,7 @@ struct ContentView: View {
                     }//label
                     Spacer()
                     HStack {
+                        //Image("birdHouse2")
                         Spacer()
                         Image(min.imageString)
                     }

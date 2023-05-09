@@ -44,7 +44,7 @@ struct clothingView: View {
                                  
                                  }.alert(isPresented: $showingAlert) {
                                      Alert( title: Text("Success!"),
-                                            message: Text("Click the back arrow to return to the home page")
+                                            message: Text("Click the back button to return to the home page")
                                  )
                                  }
                                  
