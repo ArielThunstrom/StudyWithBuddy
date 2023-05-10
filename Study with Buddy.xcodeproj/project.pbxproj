@@ -45,15 +45,15 @@
 		A141207929E6EF8B0038340A /* clothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clothingItem.swift; sourceTree = "<group>"; };
 		A141207B29E9961A0038340A /* birdImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = birdImage.swift; sourceTree = "<group>"; };
 		A19FE27A2A0BE1CE00773AEB /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		A1E49A0029DDB249000DEF54 /* loph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E49A0029DDB249000DEF54 /* Study with Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study with Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E49A0329DDB249000DEF54 /* lophApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lophApp.swift; sourceTree = "<group>"; };
 		A1E49A0529DDB249000DEF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A1E49A0729DDB24B000DEF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1E49A0929DDB24B000DEF54 /* loph.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = loph.entitlements; sourceTree = "<group>"; };
 		A1E49A0B29DDB24B000DEF54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A1E49A1129DDB24B000DEF54 /* lophTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lophTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E49A1129DDB24B000DEF54 /* Study with BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Study with BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E49A1529DDB24B000DEF54 /* lophTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lophTests.swift; sourceTree = "<group>"; };
-		A1E49A1B29DDB24B000DEF54 /* lophUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lophUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E49A1B29DDB24B000DEF54 /* Study with BuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Study with BuddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E49A1F29DDB24B000DEF54 /* lophUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lophUITests.swift; sourceTree = "<group>"; };
 		A1E49A2129DDB24B000DEF54 /* lophUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lophUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A1E49A2E29DDB4A4000DEF54 /* studyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studyView.swift; sourceTree = "<group>"; };
@@ -100,9 +100,9 @@
 		A1E49A0129DDB249000DEF54 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1E49A0029DDB249000DEF54 /* loph.app */,
-				A1E49A1129DDB24B000DEF54 /* lophTests.xctest */,
-				A1E49A1B29DDB24B000DEF54 /* lophUITests.xctest */,
+				A1E49A0029DDB249000DEF54 /* Study with Buddy.app */,
+				A1E49A1129DDB24B000DEF54 /* Study with BuddyTests.xctest */,
+				A1E49A1B29DDB24B000DEF54 /* Study with BuddyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,9 +153,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1E499FF29DDB249000DEF54 /* loph */ = {
+		A1E499FF29DDB249000DEF54 /* Study with Buddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1E49A2529DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "loph" */;
+			buildConfigurationList = A1E49A2529DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "Study with Buddy" */;
 			buildPhases = (
 				A1E499FC29DDB249000DEF54 /* Sources */,
 				A1E499FD29DDB249000DEF54 /* Frameworks */,
@@ -165,14 +165,14 @@
 			);
 			dependencies = (
 			);
-			name = loph;
+			name = "Study with Buddy";
 			productName = loph;
-			productReference = A1E49A0029DDB249000DEF54 /* loph.app */;
+			productReference = A1E49A0029DDB249000DEF54 /* Study with Buddy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A1E49A1029DDB24B000DEF54 /* lophTests */ = {
+		A1E49A1029DDB24B000DEF54 /* Study with BuddyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1E49A2829DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "lophTests" */;
+			buildConfigurationList = A1E49A2829DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "Study with BuddyTests" */;
 			buildPhases = (
 				A1E49A0D29DDB24B000DEF54 /* Sources */,
 				A1E49A0E29DDB24B000DEF54 /* Frameworks */,
@@ -183,14 +183,14 @@
 			dependencies = (
 				A1E49A1329DDB24B000DEF54 /* PBXTargetDependency */,
 			);
-			name = lophTests;
+			name = "Study with BuddyTests";
 			productName = lophTests;
-			productReference = A1E49A1129DDB24B000DEF54 /* lophTests.xctest */;
+			productReference = A1E49A1129DDB24B000DEF54 /* Study with BuddyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A1E49A1A29DDB24B000DEF54 /* lophUITests */ = {
+		A1E49A1A29DDB24B000DEF54 /* Study with BuddyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1E49A2B29DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "lophUITests" */;
+			buildConfigurationList = A1E49A2B29DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "Study with BuddyUITests" */;
 			buildPhases = (
 				A1E49A1729DDB24B000DEF54 /* Sources */,
 				A1E49A1829DDB24B000DEF54 /* Frameworks */,
@@ -201,9 +201,9 @@
 			dependencies = (
 				A1E49A1D29DDB24B000DEF54 /* PBXTargetDependency */,
 			);
-			name = lophUITests;
+			name = "Study with BuddyUITests";
 			productName = lophUITests;
-			productReference = A1E49A1B29DDB24B000DEF54 /* lophUITests.xctest */;
+			productReference = A1E49A1B29DDB24B000DEF54 /* Study with BuddyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -229,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A1E499FB29DDB249000DEF54 /* Build configuration list for PBXProject "loph" */;
+			buildConfigurationList = A1E499FB29DDB249000DEF54 /* Build configuration list for PBXProject "Study with Buddy" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -242,9 +242,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1E499FF29DDB249000DEF54 /* loph */,
-				A1E49A1029DDB24B000DEF54 /* lophTests */,
-				A1E49A1A29DDB24B000DEF54 /* lophUITests */,
+				A1E499FF29DDB249000DEF54 /* Study with Buddy */,
+				A1E49A1029DDB24B000DEF54 /* Study with BuddyTests */,
+				A1E49A1A29DDB24B000DEF54 /* Study with BuddyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,12 +314,12 @@
 /* Begin PBXTargetDependency section */
 		A1E49A1329DDB24B000DEF54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A1E499FF29DDB249000DEF54 /* loph */;
+			target = A1E499FF29DDB249000DEF54 /* Study with Buddy */;
 			targetProxy = A1E49A1229DDB24B000DEF54 /* PBXContainerItemProxy */;
 		};
 		A1E49A1D29DDB24B000DEF54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A1E499FF29DDB249000DEF54 /* loph */;
+			target = A1E499FF29DDB249000DEF54 /* Study with Buddy */;
 			targetProxy = A1E49A1C29DDB24B000DEF54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -533,7 +533,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/loph.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/loph";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Study with Buddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Study with Buddy";
 			};
 			name = Debug;
 		};
@@ -556,7 +556,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/loph.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/loph";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Study with Buddy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Study with Buddy";
 			};
 			name = Release;
 		};
@@ -607,7 +607,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1E499FB29DDB249000DEF54 /* Build configuration list for PBXProject "loph" */ = {
+		A1E499FB29DDB249000DEF54 /* Build configuration list for PBXProject "Study with Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1E49A2329DDB24B000DEF54 /* Debug */,
@@ -616,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1E49A2529DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "loph" */ = {
+		A1E49A2529DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "Study with Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1E49A2629DDB24B000DEF54 /* Debug */,
@@ -625,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1E49A2829DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "lophTests" */ = {
+		A1E49A2829DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "Study with BuddyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1E49A2929DDB24B000DEF54 /* Debug */,
@@ -634,7 +634,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1E49A2B29DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "lophUITests" */ = {
+		A1E49A2B29DDB24B000DEF54 /* Build configuration list for PBXNativeTarget "Study with BuddyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1E49A2C29DDB24B000DEF54 /* Debug */,
