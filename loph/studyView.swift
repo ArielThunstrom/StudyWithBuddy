@@ -10,6 +10,7 @@ struct studyView: View{
     @EnvironmentObject var min : testing
     //@State var showingAlert = false
     @State var initialTime = 0  //Used to keep track of the current time
+    @State private var buttonText = "Pause"
     @State var endDate = Date() //Used to keep track of the current time
     @State var minutes: Float = 30.0{ //user selected minutes (slider)
         didSet{
@@ -17,7 +18,7 @@ struct studyView: View{
         }//closes didset
     }//closes float
     
-    
+  
     let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
     
     
@@ -51,6 +52,7 @@ struct studyView: View{
     
     
     var body: some View {
+       // let title = Text("pause")
         ZStack {
             skyBlue
                 .ignoresSafeArea()
@@ -62,13 +64,24 @@ struct studyView: View{
                     .padding()
                     .onAppear{
                         start(minutes: min.minutes)
-                    }
-                //Button("start"){
-                    //.//font(.system(.title2, design: .monospaced))
-                   // start(minutes: min.minutes)
+                    } .disabled(min.isActive)
+                
+                
+                Button(buttonText, action: {
+                   
+                    buttonText = "unpause"
+                    min.isActive = false
                     
-               // }//ButtonStart
-                .disabled(min.isActive)
+                })
+                
+                if buttonText == "unpause"{
+                    Button(buttonText, action: {
+                        
+                        buttonText = "pause"
+                        min.isActive = true
+                        
+                    })
+                }
                 Image(min.imageString)
             }
             .environmentObject(testing())
@@ -85,7 +98,7 @@ struct studyView: View{
         endDate = Calendar.current.date(byAdding: .minute /* can change <<< to hour our minutes*/, value: Int(minutes), to: endDate)! // adding the user inputed minutes to the end date
     }//func start
 
-
+   
   
 } // struct studyView: View
 
