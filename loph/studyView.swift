@@ -60,11 +60,14 @@ struct studyView: View{
                 Text("\(min.time)")
                     .font(.system(size: 70, weight: .medium, design: .rounded))
                     .padding()
-                Button("start"){
+                    .onAppear{
+                        start(minutes: min.minutes)
+                    }
+                //Button("start"){
                     //.//font(.system(.title2, design: .monospaced))
-                    start(minutes: min.minutes)
+                   // start(minutes: min.minutes)
                     
-                }//ButtonStart
+               // }//ButtonStart
                 .disabled(min.isActive)
                 Image(min.imageString)
             }
