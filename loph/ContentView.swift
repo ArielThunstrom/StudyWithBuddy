@@ -8,6 +8,7 @@ import SwiftUI
     @Published var showingAlert = false
     @Published var isActive = false
     @Published var time: String = "30:00"
+    //
     @Published var minutes: Float = 30.0{
         didSet{
             time = "\(Int(minutes)):00"
