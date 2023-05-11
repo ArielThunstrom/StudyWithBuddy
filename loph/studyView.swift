@@ -8,7 +8,7 @@ import SwiftUI
 
 struct studyView: View{
     @EnvironmentObject var min : testing
-    //@State var showingAlert = false
+    @State var showingAlert = false
     @State var initialTime = 0  //Used to keep track of the current time
     @State private var buttonText = "Pause"
     @State var endDate = Date() //Used to keep track of the current time
@@ -32,7 +32,7 @@ struct studyView: View{
         if diff <= 0{ //means count down is over
             min.isActive = false
             min.time = "0:00"
-            //self.showingAlert = true
+            showingAlert = true
             return
         } // diff
         
@@ -62,6 +62,8 @@ struct studyView: View{
                 Text("\(min.time)")
                     .font(.system(size: 70, weight: .medium, design: .rounded))
                     .padding()
+                    .alert("timer done!", isPresented: $showingAlert){
+                    }
                     .onAppear{
                         start(minutes: min.minutes)
                     } .disabled(min.isActive)
