@@ -17,7 +17,7 @@ struct studyView: View{
             min.time = "\(Int(min.minutes)):00" //when user picks time, immediatly update the time (slider)
         }//closes didset
     }//closes float
-    
+    @State var shouldHide = false
   
     let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
     
@@ -77,11 +77,11 @@ struct studyView: View{
                 
                 if buttonText == "unpause"{
                     Button(buttonText, action: {
-                        
+                        self.shouldHide = true
                         buttonText = "pause"
                         min.isActive = true
                         
-                    })
+                    }).opacity(shouldHide ? 0 : 1)
                 }
                  
                 Image(min.imageString)
