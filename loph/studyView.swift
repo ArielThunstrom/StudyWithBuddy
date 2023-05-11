@@ -101,9 +101,8 @@ struct studyView: View{
         min.isActive = true // timer starts so is currentenly on
         endDate = Calendar.current.date(byAdding: .minute /* can change <<< to hour our minutes*/, value: Int(minutes), to: endDate)! // adding the user inputed minutes to the end date
     }//func start
-    func pausePlay (buttonLabel: String) {
-        buttonText = buttonLabel
-    }
+    
+    
 
 
    
