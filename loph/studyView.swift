@@ -72,7 +72,7 @@ struct studyView: View{
                     min.isActive = false
                     
                     
-                }).labelsHidden()
+                })
                 
                 
                 if buttonText == "unpause"{
