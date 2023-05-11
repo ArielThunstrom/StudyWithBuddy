@@ -28,7 +28,7 @@ let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
 struct ContentView: View {
 
     @StateObject var min = testing()
-
+    @State var shouldHide = true
     
     var body: some View {
         
@@ -80,7 +80,16 @@ struct ContentView: View {
                     HStack {
                         //Image("birdHouse2")
                         Spacer()
-                        Image(min.imageString)
+                        //Image(min.imageString)
+                        Text("Let's start studying!")
+                            .opacity(shouldHide ? 0 : 1)
+                        Button(action: {
+                            shouldHide = false
+                        }) {
+                            Image(min.imageString)
+                         //Text(item.category)
+                         
+                         }
                     }
                     
                     
