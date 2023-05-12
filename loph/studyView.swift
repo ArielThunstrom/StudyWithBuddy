@@ -21,7 +21,7 @@ struct studyView: View{
   
     let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
     
-    
+    @State private var isPlaying = true
     
     func updateCountDown(){ //actually updates published value and format everything
         guard min.isActive else{return} // make sure isActive is true
@@ -67,7 +67,14 @@ struct studyView: View{
                     .onAppear{
                         start(minutes: min.minutes)
                     } .disabled(min.isActive)
+                Button(action: {
+                            self.isPlaying.toggle()
+                            self.min.isActive.toggle()
+                        }, label: {
+                            Image(systemName: self.isPlaying ? "pause" : "play")
+                        })
                 
+                /*
                 Button(buttonText, action: {
                     if buttonText == "pause" {
                         buttonText = "unpause"
@@ -82,7 +89,7 @@ struct studyView: View{
                     
                     
                 })
-                
+                */
                 
                // if buttonText == "unpause"{
                    // Button(buttonText, action: {
