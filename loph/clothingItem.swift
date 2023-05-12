@@ -29,7 +29,25 @@ class clothingItem : ObservableObject {
         type(image: "grey bird"),
         type(image: "black birdpng"),
         type(image: "purple bird"),
-        type(image: "purpleBlue")
+        type(image: "purpleBlue"),
+        type(image: "BlueOmbre"),
+        type(image: "BlueWhite"),
+        type(image: "blueYellow"),
+        type(image: "GreenOrange"),
+        type(image: "GreenWhite"),
+        type(image: "greenYellow"),
+        type(image: "pinkBlue"),
+        type(image: "pinkGreen"),
+        type(image: "pinkPurple"),
+        type(image: "pinkYellow2"),
+        type(image: "PurpleWhite"),
+        type(image: "purpleYellow"),
+        type(image: "Rainbow"),
+        type(image: "RoseWhite"),
+        type(image: "YellowBlack"),
+        type(image: "sophia"),
+        type(image: "teal")
+        
         
         ]
     
