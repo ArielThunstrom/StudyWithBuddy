@@ -36,6 +36,9 @@ struct studyView: View{
                     .font(.system(size: 70, weight: .medium, design: .rounded))
                     .padding()
                     .alert("timer done!", isPresented: $showingAlert){
+                        Button("end", role: .destructive, action: goBack)
+                        
+                        
                        //dismiss()
                     }
                     .onAppear{
@@ -92,8 +95,11 @@ struct studyView: View{
         
     }//func updateCountDown
 
+    func goBack() {
+        dismiss()
+    } // goBack
+    
 
-   
   
 } // struct studyView: View
 
