@@ -17,7 +17,7 @@ class clothingItem : ObservableObject {
     
     @Published var starting = type(category: "white", image: "white bird")
     
-    @Published var categories: [String] = ["Red", "Orange", "Yellow", "Green", "Blue", "Pink", "Grey", "Black", "Purple"]
+    @Published var categories: [String] = ["Red", "Orange", "Yellow", "Green", "Blue", "Pink", "Grey", "Black", "Purple", "Purple Blue"]
     
     @Published var types: [type] = [
         type(category: "Red", image: "red bird"),
@@ -29,6 +29,7 @@ class clothingItem : ObservableObject {
         type(category: "Grey", image: "grey bird"),
         type(category: "Black", image: "black birdpng"),
         type(category: "Purple", image: "purple bird"),
+        type(category: "Purple Blue", image: "purpleBlue")
         
         ]
     
