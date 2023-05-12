@@ -45,7 +45,7 @@ struct ContentView: View {
                         NavigationLink {
                             clothingView()
                         } label: {
-                            Image("smallHanger")
+                            Image("closet")
                            
                         }//label
                     }//HStack
