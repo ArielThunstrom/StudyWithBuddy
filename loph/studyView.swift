@@ -10,7 +10,7 @@ struct studyView: View{
     @EnvironmentObject var min : testing
     @State var showingAlert = false
     @State var initialTime = 0  //Used to keep track of the current time
-    @State private var buttonText = "Pause"
+    @State private var buttonText = "pause"
     @State var endDate = Date() //Used to keep track of the current time
     @State var minutes: Float = 30.0{ //user selected minutes (slider)
         didSet{
