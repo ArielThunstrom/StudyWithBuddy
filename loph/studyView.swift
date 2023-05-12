@@ -69,22 +69,30 @@ struct studyView: View{
                     } .disabled(min.isActive)
                 
                 Button(buttonText, action: {
+                    if buttonText == "pause" {
+                        buttonText = "unpause"
+                        min.isActive = false
+                    } else{
+                        buttonText = "pause"
+                        min.isActive = true
+                    }
                     
-                   buttonText = "upause"
-                    min.isActive = false
+                   //buttonText = "upause"
+                   // min.isActive = false
                     
                     
                 })
                 
                 
-                if buttonText == "unpause"{
-                    Button(buttonText, action: {
-                        self.shouldHide = true
-                        buttonText = "pause"
-                        min.isActive = true
+               // if buttonText == "unpause"{
+                   // Button(buttonText, action: {
                         
-                    }).opacity(shouldHide ? 0 : 1)
-                }
+                       // self.shouldHide = true
+                        //buttonText = "pause"
+                        //min.isActive = true
+                        
+                   // }).opacity(shouldHide ? 0 : 1)
+               // }
                  
                 Image(min.imageString)
             }
