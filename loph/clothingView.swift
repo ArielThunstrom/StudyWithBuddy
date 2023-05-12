@@ -16,7 +16,9 @@ struct clothingView: View {
     @ObservedObject var birds = clothingItem()
     @State private var showingAlert = false
     @EnvironmentObject var min : testing
- 
+    @Environment(\.dismiss) private var dismiss
+    
+    
         var body: some View {
         NavigationView {
             ZStack{
@@ -37,13 +39,9 @@ struct clothingView: View {
                                 Button(action: {
                                     min.imageString = item.image
                                     showingAlert = true
+                                    dismiss()
                                 }) {
                                  Image(item.image)
-                                 }.alert(isPresented: $showingAlert) {
-                                     Alert( title: Text("Success!"),
-                                            message: Text("Click the back button to return to the home page")
-                                            
-                                 ) // Alert
                                  } //.alert
                                  
                                 

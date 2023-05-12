@@ -22,6 +22,7 @@ struct studyView: View{
     public let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     let green = Color(red: 0.808, green: 0.847, blue: 0.78)
 
+    @Environment(\.dismiss) private var dismiss
  
     
     var body: some View {
@@ -35,6 +36,7 @@ struct studyView: View{
                     .font(.system(size: 70, weight: .medium, design: .rounded))
                     .padding()
                     .alert("timer done!", isPresented: $showingAlert){
+                       //dismiss()
                     }
                     .onAppear{
                         start(minutes: min.minutes)
