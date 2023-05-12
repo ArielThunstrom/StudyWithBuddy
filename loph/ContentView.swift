@@ -46,11 +46,9 @@ struct ContentView: View {
                             clothingView()
                         } label: {
                             Image("smallHanger")
-                            //Text("Change Your Study Buddy")
-                                //.font(.system(.title2, design: .monospaced))
                            
-                        }
-                    }
+                        }//label
+                    }//HStack
                     
                     Spacer()
                     Text("\(min.time)")
@@ -78,9 +76,8 @@ struct ContentView: View {
                     }//label
                     Spacer()
                     HStack {
-                        //Image("birdHouse2")
+
                         Spacer()
-                        //Image(min.imageString)
                         Text("Let's start studying!")
                             .opacity(shouldHide ? 0 : 1)
                         Button(action: {

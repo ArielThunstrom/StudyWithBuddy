@@ -8,6 +8,8 @@ import SwiftUI
 
 struct studyView: View{
     @EnvironmentObject var min : testing
+    @State var shouldHide = false
+    @State private var isPlaying = true
     @State var showingAlert = false
     @State var initialTime = 0  //Used to keep track of the current time
     @State private var buttonText = "pause"
@@ -17,11 +19,52 @@ struct studyView: View{
             min.time = "\(Int(min.minutes)):00" //when user picks time, immediatly update the time (slider)
         }//closes didset
     }//closes float
-    @State var shouldHide = false
-  
-    let skyBlue = Color(red: 0.808, green: 0.847, blue: 0.78)
+    public let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let green = Color(red: 0.808, green: 0.847, blue: 0.78)
+
+ 
     
-    @State private var isPlaying = true
+    var body: some View {
+        ZStack {
+            green
+                .ignoresSafeArea()
+            VStack{
+                
+                
+                Text("\(min.time)")
+                    .font(.system(size: 70, weight: .medium, design: .rounded))
+                    .padding()
+                    .alert("timer done!", isPresented: $showingAlert){
+                    }
+                    .onAppear{
+                        start(minutes: min.minutes)
+                    } .disabled(min.isActive)
+                Button(action: {
+                            self.isPlaying.toggle()
+                            self.min.isActive.toggle()
+                        }, label: {
+                            Image(systemName: self.isPlaying ? "pause" : "play")
+                        })
+                ZStack{
+                    Image("branch 1")
+
+                   Image(min.imageString)
+                }
+            }
+            .environmentObject(testing())
+            .onReceive(timer) {_ in
+                updateCountDown()
+            }
+        }//zstack
+    } // var body: some View
+    
+    func start(minutes: Float){ //Start timer with the given minutes (has to be float bc slider requires float)
+        initialTime = Int(minutes) // initial time set to the int of the minutes the user selects
+        endDate = Date() // date of the time when the user starts the timer (time gets
+        min.isActive = true // timer starts so is currentenly on
+        endDate = Calendar.current.date(byAdding: .minute /* can change <<< to hour our minutes*/, value: Int(minutes), to: endDate)! // adding the user inputed minutes to the end date
+    }//func start
+    
     
     func updateCountDown(){ //actually updates published value and format everything
         guard min.isActive else{return} // make sure isActive is true
@@ -46,53 +89,6 @@ struct studyView: View{
         
         
     }//func updateCountDown
-    
-    
-    public let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    
-    var body: some View {
-       // let title = Text("pause")
-        ZStack {
-            skyBlue
-                .ignoresSafeArea()
-            VStack{
-                
-                
-                Text("\(min.time)")
-                    .font(.system(size: 70, weight: .medium, design: .rounded))
-                    .padding()
-                    .alert("timer done!", isPresented: $showingAlert){
-                    }
-                    .onAppear{
-                        start(minutes: min.minutes)
-                    } .disabled(min.isActive)
-                Button(action: {
-                            self.isPlaying.toggle()
-                            self.min.isActive.toggle()
-                        }, label: {
-                            Image(systemName: self.isPlaying ? "pause" : "play")
-                        })
-                ZStack{
-                    Image("branch 1")
-                    Image(min.imageString)
-                }
-            }
-            .environmentObject(testing())
-            .onReceive(timer) {_ in
-                updateCountDown()
-            }
-        }//zstack
-    } // var body: some View
-    
-    func start(minutes: Float){ //Start timer with the given minutes (has to be float bc slider requires float)
-        initialTime = Int(minutes) // initial time set to the int of the minutes the user selects
-        endDate = Date() // date of the time when the user starts the timer (time gets
-        min.isActive = true // timer starts so is currentenly on
-        endDate = Calendar.current.date(byAdding: .minute /* can change <<< to hour our minutes*/, value: Int(minutes), to: endDate)! // adding the user inputed minutes to the end date
-    }//func start
-    
-    
 
 
    

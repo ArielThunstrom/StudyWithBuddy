@@ -15,7 +15,6 @@ struct clothingView: View {
     
     @ObservedObject var birds = clothingItem()
     @State private var showingAlert = false
-    //this is basically min
     @EnvironmentObject var min : testing
  
         var body: some View {
@@ -40,29 +39,27 @@ struct clothingView: View {
                                     showingAlert = true
                                 }) {
                                  Image(item.image)
-                                 //Text(item.category)
-                                 
                                  }.alert(isPresented: $showingAlert) {
                                      Alert( title: Text("Success!"),
                                             message: Text("Click the back button to return to the home page")
                                             
-                                 )
-                                 }
+                                 ) // Alert
+                                 } //.alert
                                  
                                 
                                  
                         
-                            }
-                        }
+                            }//vstack
+                        }//ForEach
                         
                     }.coordinateSpace(name: "scroll")
                     
-                }.environmentObject(testing())
-            }
-        }
-    }
+                }.environmentObject(testing()) // ScrollView
+            }//ZStack
+        }//NavigationView
+    }//var:body
     
-}
+}//struct:clothingView
 
 
 
