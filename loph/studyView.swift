@@ -74,7 +74,7 @@ struct studyView: View{
                             Image(systemName: self.isPlaying ? "pause" : "play")
                         })
                 ZStack{
-                    Image("branch")
+                    Image("branch 1")
                     Image(min.imageString)
                 }
             }
