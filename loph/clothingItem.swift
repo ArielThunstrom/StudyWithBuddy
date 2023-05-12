@@ -11,25 +11,25 @@ class clothingItem : ObservableObject {
     
     
     struct type : Hashable {
-        var category: String
+        //var category: String
         var image: String
     }
     
-    @Published var starting = type(category: "white", image: "white bird")
+    @Published var starting = type(image: "white bird")
     
-    @Published var categories: [String] = ["Red", "Orange", "Yellow", "Green", "Blue", "Pink", "Grey", "Black", "Purple", "Purple Blue"]
+    //@Published var categories: [String] = ["Red", "Orange", "Yellow", "Green", "Blue", "Pink", "Grey", "Black", "Purple", "Purple Blue"]
     
     @Published var types: [type] = [
-        type(category: "Red", image: "red bird"),
-        type(category: "Orange", image: "orange bird"),
-        type(category: "Yellow", image: "yellow bird"),
-        type(category: "Green", image: "green bird"),
-        type(category: "Blue", image: "blue bird"),
-        type(category: "Pink", image: "pink bird"),
-        type(category: "Grey", image: "grey bird"),
-        type(category: "Black", image: "black birdpng"),
-        type(category: "Purple", image: "purple bird"),
-        type(category: "Purple Blue", image: "purpleBlue")
+        type(image: "red bird"),
+        type(image: "orange bird"),
+        type(image: "yellow bird"),
+        type(image: "green bird"),
+        type(image: "blue bird"),
+        type(image: "pink bird"),
+        type(image: "grey bird"),
+        type(image: "black birdpng"),
+        type(image: "purple bird"),
+        type(image: "purpleBlue")
         
         ]
     
