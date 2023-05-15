@@ -26,8 +26,8 @@ struct clothingView: View {
                     .ignoresSafeArea()
                 //put a background image here
                 ScrollView {
-                    Text("Pick Your Study Buddy!")
-                        .font(.system(.title2, design: .monospaced))
+                    //Text("Pick Your Study Buddy!")
+                        //.font(.system(.title2, design: .monospaced))
                     LazyVGrid(columns: [
                         GridItem(.flexible()),
                         GridItem(.flexible()),
@@ -54,7 +54,9 @@ struct clothingView: View {
                     
                 }.environmentObject(testing()) // ScrollView
             }//ZStack
-        }//NavigationView
+        }.navigationTitle("Pick Your Study Buddy!")
+                .foregroundColor(green)
+            //NavigationView
     }//var:body
     
 }//struct:clothingView

@@ -41,13 +41,22 @@ struct ContentView: View {
                     HStack {
                         //put a settings button here
                         Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
                      
                         NavigationLink {
                             clothingView()
                         } label: {
-                            Image("closet")
+                            VStack {
+                                Image("closetResize")
+                                Text("New Buddy")
+                            }
+                            
                            
                         }//label
+                        Spacer()
                     }//HStack
                     
                     Spacer()
