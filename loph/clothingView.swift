@@ -26,6 +26,13 @@ struct clothingView: View {
                     .ignoresSafeArea()
                 //put a background image here
                 ScrollView {
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
                     //Text("Pick Your Study Buddy!")
                         //.font(.system(.title2, design: .monospaced))
                     LazyVGrid(columns: [
@@ -53,9 +60,24 @@ struct clothingView: View {
                     }.coordinateSpace(name: "scroll")
                     
                 }.environmentObject(testing()) // ScrollView
+                .overlay(
+                ZStack{
+                    Color.clear
+                        .background(.ultraThinMaterial)
+                        .blur(radius: 10)
+                        
+                    
+                    Text ("Pick Your Study Buddy!")
+                        .font(.largeTitle.weight(.bold))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading , 20)
+                }.frame (height: 60)
+                    .frame(maxHeight: .infinity, alignment: .top)
+                )
+                
             }//ZStack
-        }.navigationTitle("Pick Your Study Buddy!")
-                .foregroundColor(green)
+        }//.navigationTitle("Pick Your Study Buddy!")
+                //.foregroundColor(green)
             //NavigationView
     }//var:body
     
