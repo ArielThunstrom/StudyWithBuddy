@@ -39,11 +39,7 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 VStack{
                     HStack {
-                        //put a settings button here
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
+                   
                         Spacer()
                      
                         NavigationLink {
@@ -51,12 +47,13 @@ struct ContentView: View {
                         } label: {
                             VStack {
                                 Image("closetResize")
-                                Text("New Buddy")
+                                    .padding()
+                                //Text("New Buddy")
                             }
                             
                            
                         }//label
-                        Spacer()
+                       // Spacer()
                     }//HStack
                     
                     Spacer()
@@ -93,6 +90,7 @@ struct ContentView: View {
                             shouldHide = false
                         }) {
                             Image(min.imageString)
+                                .padding()
                          //Text(item.category)
                          
                          }

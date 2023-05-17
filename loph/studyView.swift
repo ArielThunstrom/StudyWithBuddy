@@ -35,8 +35,8 @@ struct studyView: View{
                 Text("\(min.time)")
                     .font(.system(size: 70, weight: .medium, design: .rounded))
                     .padding()
-                    .alert("timer done!", isPresented: $showingAlert){
-                        Button("end", role: .destructive, action: goBack)
+                    .alert("Timer Done!", isPresented: $showingAlert){
+                        Button("End", role: .destructive, action: goBack)
                         
                         
                        //dismiss()
