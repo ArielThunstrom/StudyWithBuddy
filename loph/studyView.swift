@@ -45,19 +45,11 @@ struct studyView: View{
                         start(minutes: min.minutes)
                     } .disabled(min.isActive)
                 
-                Button(action: {
-                            self.isPlaying.toggle()
-                    if isPlaying {
-                        start(minutes: min.minutes)
-                    }
-                    else {
-                        reset()
-                        
-                    }
-                        }, label: {
-                            Text(self.isPlaying ? "Reset" : "Start")
-                                
-                        }).tint(.red)
+                Button("End Timer", action: {
+                    reset()
+                    dismiss()
+                    
+                }).tint(.red)
                 
                 
                 
