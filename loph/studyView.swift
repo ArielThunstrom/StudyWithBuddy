@@ -44,12 +44,23 @@ struct studyView: View{
                     .onAppear{
                         start(minutes: min.minutes)
                     } .disabled(min.isActive)
+                
                 Button(action: {
                             self.isPlaying.toggle()
-                            self.min.isActive.toggle()
+                    if isPlaying {
+                        start(minutes: min.minutes)
+                    }
+                    else {
+                        reset()
+                        
+                    }
                         }, label: {
-                            Image(systemName: self.isPlaying ? "pause" : "play")
-                        })
+                            Text(self.isPlaying ? "Reset" : "Start")
+                                
+                        }).tint(.red)
+                
+                
+                
                 ZStack{
                     Image("branch 1")
 
@@ -69,6 +80,12 @@ struct studyView: View{
         min.isActive = true // timer starts so is currentenly on
         endDate = Calendar.current.date(byAdding: .minute /* can change <<< to hour our minutes*/, value: Int(minutes), to: endDate)! // adding the user inputed minutes to the end date
     }//func start
+    
+    func reset() {
+        self.minutes = Float(initialTime)
+        self.min.isActive = false
+        self.min.time = "\(Int(minutes)):00"
+    }
     
     
     func updateCountDown(){ //actually updates published value and format everything
