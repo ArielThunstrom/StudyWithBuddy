@@ -29,6 +29,7 @@ struct ContentView: View {
 
     @StateObject var min = testing()
     @State var shouldHide = true
+    @State var isToDoListShowing = false
     
     var body: some View {
         
@@ -39,7 +40,17 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 VStack{
                     HStack {
-                   
+                        //Spacer()
+                        Button(action: {
+                            isToDoListShowing = true
+                        }) {
+                            Image(systemName: "square.and.pencil").resizable().frame(width: 50.0, height: 50.0)
+                                .padding()
+                        }.popover(isPresented: $isToDoListShowing) {
+                            ToDoList()
+
+                            
+                        }
                         Spacer()
                      
                         NavigationLink {

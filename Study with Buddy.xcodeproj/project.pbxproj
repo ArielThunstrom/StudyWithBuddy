@@ -20,6 +20,7 @@
 		A1E49A2229DDB24B000DEF54 /* lophUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A2129DDB24B000DEF54 /* lophUITestsLaunchTests.swift */; };
 		A1E49A2F29DDB4A4000DEF54 /* studyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A2E29DDB4A4000DEF54 /* studyView.swift */; };
 		A1E49A3729DDB5D8000DEF54 /* NotificationAppExit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E49A3629DDB5D8000DEF54 /* NotificationAppExit.swift */; };
+		A1F53B1B2A26C34B0046739C /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F53B1A2A26C34B0046739C /* ToDoList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A1E49A2129DDB24B000DEF54 /* lophUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lophUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A1E49A2E29DDB4A4000DEF54 /* studyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studyView.swift; sourceTree = "<group>"; };
 		A1E49A3629DDB5D8000DEF54 /* NotificationAppExit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAppExit.swift; sourceTree = "<group>"; };
+		A1F53B1A2A26C34B0046739C /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				A11364AB29E59DB1007BF4A4 /* clothingView.swift */,
 				A141207929E6EF8B0038340A /* clothingItem.swift */,
 				A1E49A2E29DDB4A4000DEF54 /* studyView.swift */,
+				A1F53B1A2A26C34B0046739C /* ToDoList.swift */,
 				A1E49A3629DDB5D8000DEF54 /* NotificationAppExit.swift */,
 				A1E49A0729DDB24B000DEF54 /* Assets.xcassets */,
 				A1E49A0929DDB24B000DEF54 /* loph.entitlements */,
@@ -281,6 +284,7 @@
 				A1E49A0629DDB249000DEF54 /* ContentView.swift in Sources */,
 				A141207A29E6EF8B0038340A /* clothingItem.swift in Sources */,
 				A1E49A2F29DDB4A4000DEF54 /* studyView.swift in Sources */,
+				A1F53B1B2A26C34B0046739C /* ToDoList.swift in Sources */,
 				A11364AC29E59DB1007BF4A4 /* clothingView.swift in Sources */,
 				A1E49A3729DDB5D8000DEF54 /* NotificationAppExit.swift in Sources */,
 				A141207C29E9961A0038340A /* birdImage.swift in Sources */,
