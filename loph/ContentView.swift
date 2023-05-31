@@ -57,7 +57,7 @@ struct ContentView: View {
                             clothingView()
                         } label: {
                             VStack {
-                                Image("closetResize")
+                                Image(systemName: "bird").resizable().frame(width : 50.0, height: 50.0)
                                     .padding()
                                 //Text("New Buddy")
                             }

@@ -50,6 +50,13 @@ struct studyView: View{
                     dismiss()
                     
                 }).tint(.red)
+                    .font(.system(.title3, design: .monospaced))
+                    .padding()
+                    .frame(width: 200)
+                    .background(.thinMaterial)
+                    .cornerRadius(20)
+                    .overlay(RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.gray, lineWidth: 4))
                 
                 
                 
