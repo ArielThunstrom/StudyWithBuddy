@@ -44,7 +44,7 @@ struct ContentView: View {
                         Button(action: {
                             isToDoListShowing = true
                         }) {
-                            Image(systemName: "square.and.pencil").resizable().frame(width: 50.0, height: 50.0)
+                            Image(systemName: "list.bullet.clipboard").resizable().frame(width: 50.0, height: 50.0)
                                 .padding()
                         }.popover(isPresented: $isToDoListShowing) {
                             ToDoList()
